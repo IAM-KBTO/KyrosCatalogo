@@ -1,0 +1,14 @@
+# Ignorar librerías pesadas
+node_modules/
+catalogo-kyros/node_modules/
+backend-kyros/node_modules/
+
+# Ignorar builds de producción (El profe genera el suyo)
+catalogo-kyros/dist/
+
+# Ignorar archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignorar variables de entorno (por si luego usas .env)
+.env

@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paleta oficial de KYROS */
+  --color-kyros-blue: #2563eb; /* Un azul tecnológico y llamativo */
+  --color-kyros-dark: #1e3a8a; /* Un azul marino para contrastes o sombras */
+}
+
+/* Tema claro: Fondo blanco/grisáceo muy sutil */
+body {
+  background-color: #f8fafc; 
+  color: #0f172a; /* Texto oscuro para que no se pierda y sea fácil de leer */
+}

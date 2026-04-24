@@ -1,16 +1,42 @@
-# React + Vite
+# 🌐 KYROS - Catálogo de Monitoreo IoT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
-Currently, two official plugins are available:
+Plataforma web *Full-Stack* desarrollada para la comercialización y gestión de inventario de equipos de monitoreo industrial e Internet de las Cosas (IoT). 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Este proyecto implementa una arquitectura moderna separando la interfaz de usuario (Frontend) y la lógica de negocio/datos (Backend), asegurando escalabilidad y una experiencia de usuario fluida.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Características Principales
 
-## Expanding the ESLint configuration
+* **Catálogo Dinámico:** Visualización en cuadrícula de sensores, microcontroladores y actuadores con renderizado optimizado.
+* **Sistema de Enrutamiento:** Navegación instantánea tipo *Single Page Application* (SPA) sin recargas de página utilizando React Router.
+* **Gestión de Inventario en Tiempo Real:** Las ventas descuentan automáticamente el stock directamente desde la base de datos en la nube.
+* **Diseño UI/UX Moderno:** Interfaz minimalista y responsiva construida con Tailwind CSS, incluyendo feedback visual mediante notificaciones flotantes (Sonner).
+* **Base de Datos NoSQL:** Esquemas de datos flexibles y escalables implementados con Mongoose y MongoDB Atlas.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🏗️ Arquitectura del Proyecto (Monorepo)
+
+El repositorio contiene ambas partes de la aplicación:
+
+```text
+PROYECTOKYROS/
+├── backend-kyros/       # API RESTful (Node.js + Express)
+│   ├── models/          # Esquemas de Mongoose (Producto.js)
+│   ├── server.js        # Configuración del servidor y endpoints
+│   └── seed.js          # Script de inyección de datos iniciales
+│
+└── catalogo-kyros/      # Interfaz de Usuario (React + Vite)
+    ├── src/             
+    │   ├── App.jsx      # Rutas y vista del catálogo
+    │   ├── Checkout.jsx # Vista de procesamiento de venta
+    │   └── ProductoDetalle.jsx # Vista individual del equipo
+    └── index.html       # Plantilla base
